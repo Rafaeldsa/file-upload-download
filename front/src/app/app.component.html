@@ -1,0 +1,14 @@
+<input type="file" (change)="upload($event)" />
+<br />
+
+<ng-container *ngIf="uploadSuccess"> Upload Successful </ng-container>
+
+<ul *ngFor="let file of files; index as i">
+  <li>
+    {{ file.name }} - <a href="#" (click)="download(file)">{{ file.url }}</a> -
+    {{ file.type }} - {{ file.size }}
+  </li>
+</ul>
+
+<br />
+
